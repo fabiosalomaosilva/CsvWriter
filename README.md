@@ -1,13 +1,13 @@
 # CsvWriter
-CsvWriter é uma ferramenta simples para escrever dados em arquivos CSV.
+CsvWriter is a simple tool for writing data to CSV files.
 
-## Funcionalidades
+## Features
 
-- Escrever dados em formato CSV.
-- Suporte para diferentes delimitadores.
-- Fácil de usar e integrar em outros projetos.
+- Write data in CSV format.
+- Support for different delimiters.
+- Easy to use and integrate into other projects.
 
-## Instalação
+## Installation
 
 Para instalar o CsvWriter, você pode clonar o repositório diretamente do GitHub:
 
@@ -15,9 +15,9 @@ Para instalar o CsvWriter, você pode clonar o repositório diretamente do GitHu
 git clone https://github.com/seu-usuario/CsvWriter.git
 ```
 
-## Uso
+## Usage
 
-Aqui está um exemplo básico de como usar o CsvWriter para criar um arquivo CSV em MemoryStream:
+Here is a basic example of how to use CsvWriter to create a CSV file in MemoryStream:
 
 ```csharp
 using System;
@@ -40,30 +40,7 @@ class Program
 }
 ```
 
-Aqui está um exemplo básico de como usar o CsvWriter para criar um arquivo CSV em StreamWriter:
-
-```csharp
-using System;
-using System.Collections.Generic;
-using CsvWriterLib;
-
-class Program
-{
-    static void Main()
-    {
-        var data = new List<List<string>> {
-            new List<string> { "Nome", "Idade", "Cidade" },
-            new List<string> { "Alice", "30", "São Paulo" },
-            new List<string> { "Bob", "25", "Rio de Janeiro" }
-        };
-
-        var csv = new Writer();
-        StreamWriter relatorio = csv.CreateAsStreamWriter(data, new UTF8Encoding(false));
-    }
-}
-```
-
-Aqui está um exemplo básico de como usar o CsvWriter para criar um arquivo CSV com compressão ZIP com retorno em MemoryStream:
+Here is a basic example of how to use CsvWriter to create a ZIP-compressed CSV file with output in MemoryStream:
 
 ```csharp
 using System;
@@ -87,11 +64,12 @@ class Program
 }
 ```
 
-## Contribuição
+## Contribution
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+Contributions are welcome! Feel free to open issues and pull requests.
 
-## Licença
+## License
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-CsvWriter é uma ferramenta simples para escrever dados em arquivos CSV.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+CsvWriter is a simple tool for writing data to CSV files.

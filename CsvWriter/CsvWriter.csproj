@@ -6,7 +6,7 @@
 	<Nullable>enable</Nullable>
 	<Authors>Fábio Salomão</Authors>
 	<Description>Biblioteca para geração de arquivos no formato CSV</Description>
-	<Version>1.0.3</Version>
+	<Version>1.0.4</Version>
 	<PackageOutputPath>./nupkg</PackageOutputPath>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<Title>CSV Writer</Title>
