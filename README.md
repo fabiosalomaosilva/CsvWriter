@@ -35,7 +35,7 @@ class Program
         };
 
         var csv = new Writer();
-        MemoryStream relatorio = await csv.Create(data, nome, new UTF8Encoding(false));
+        MemoryStream relatorio = await csv.CreateFileAsMemoryStream(data, nome, new UTF8Encoding(false));
     }
 }
 ```
@@ -59,7 +59,7 @@ class Program
 
         var name = "RelatorioCliente";
         var csv = new Writer();
-        MemoryStream relatorio = await csv.CreateCompressed(data, name, new UTF8Encoding(false));
+        MemoryStream relatorio = await csv.CreateCompressedFileAsMemoryStream(data, name, new UTF8Encoding(false));
     }
 }
 ```
