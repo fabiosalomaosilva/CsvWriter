@@ -34,7 +34,7 @@ public class Writer
             csv.Append("\n");
             foreach (var property in prop)
             {
-                var value = property.GetValue(obj);
+                var value = Convert.ToString(property.GetValue(obj));
                 csv.Append(value);
                 csv.Append(";");
             }
