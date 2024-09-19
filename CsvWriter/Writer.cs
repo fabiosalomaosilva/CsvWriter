@@ -1,4 +1,5 @@
 ﻿using CsvWriter.Utils;
+using System.Globalization;
 using System.IO.Compression;
 using System.Text;
 
@@ -34,7 +35,7 @@ public class Writer
             csv.Append("\n");
             foreach (var property in prop)
             {
-                var value = Convert.ToString(property.GetValue(obj));
+                var value = Convert.ToString(property.GetValue(obj), CultureInfo.InvariantCulture);
                 csv.Append(value);
                 csv.Append(";");
             }
@@ -81,7 +82,7 @@ public class Writer
             csv.Append("\n");
             foreach (var property in prop)
             {
-                var value = property.GetValue(obj);
+                var value = Convert.ToString(property.GetValue(obj), CultureInfo.InvariantCulture);
                 csv.Append(value);
                 csv.Append(";");
             }
