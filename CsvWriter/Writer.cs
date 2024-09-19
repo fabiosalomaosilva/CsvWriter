@@ -6,14 +6,14 @@ namespace CsvWriter;
 
 public class Writer
 {
-    public StreamWriter CreateAsStreamWriter<T>(IEnumerable<T> objs, Encoding encoding)
+    public StreamWriter CreateAsStreamWriter<T>(IEnumerable<T> objs, Encoding? encoding = null)
     {
         var properties = typeof(T).GetProperties();
         var csv = new StringBuilder();
         foreach (var property in properties)
         {
-            var name = property.GetNameColumn();
-            csv.Append(name);
+            var nameColumn = property.GetNameColumn();
+            csv.Append(nameColumn);
             csv.Append(";");
         }
 
@@ -33,14 +33,14 @@ public class Writer
         return new StreamWriter(stream);
     }
 
-    public MemoryStream Create<T>(IEnumerable<T> objs, Encoding encoding)
+    public MemoryStream Create<T>(IEnumerable<T> objs, Encoding? encoding = null)
     {
         var properties = typeof(T).GetProperties();
         var csv = new StringBuilder();
         foreach (var property in properties)
         {
-            var name = property.GetNameColumn();
-            csv.Append(name);
+            var nameColumn = property.GetNameColumn();
+            csv.Append(nameColumn);
             csv.Append(";");
         }
 
@@ -59,15 +59,26 @@ public class Writer
         return new MemoryStream(encoding.GetBytes(csv.ToString()));
     }
 
-    public async Task<MemoryStream> CreateCompressed<T>(IEnumerable<T> objs, string nome, Encoding? encoding = null)
+    public async Task<MemoryStream> CreateCompressed<T>(IEnumerable<T> objs, string name, Encoding? encoding = null)
     {
+        if (string.IsNullOrEmpty(name))
+        {
+            name = DateTime.Now.ToString("yyyyMMddHHmmss");
+        }
+
+        if (name.EndsWith(".zip", StringComparison.OrdinalIgnoreCase) ||
+            name.EndsWith(".csv", StringComparison.OrdinalIgnoreCase))
+        {
+            name = Path.GetFileNameWithoutExtension(name);
+        }
+
         encoding ??= Encoding.UTF8;
         var properties = typeof(T).GetProperties();
         var csv = new StringBuilder();
         foreach (var property in properties)
         {
-            var name = property.GetNameColumn();
-            csv.Append(name);
+            var nameColumn = property.GetNameColumn();
+            csv.Append(nameColumn);
             csv.Append(";");
         }
 
@@ -89,7 +100,7 @@ public class Writer
         var compressedStream = new MemoryStream();
         using (var archive = new ZipArchive(compressedStream, ZipArchiveMode.Create, true))
         {
-            var zipEntry = archive.CreateEntry(nome + ".csv");
+            var zipEntry = archive.CreateEntry(name + ".csv");
             await using var zipStream = zipEntry.Open();
             await memoryStream.CopyToAsync(zipStream);
         }
