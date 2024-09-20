@@ -18,12 +18,12 @@ Here are some ways to install the package:
 
 ```bash
 .NET CLI
-dotnet add package CsvWriter
+> dotnet add package CsvWriter
 
 or
 
 Package Manager
-NuGet\Install-Package CsvWriter
+PM> Install-Package CsvWriter
 
 or
 
