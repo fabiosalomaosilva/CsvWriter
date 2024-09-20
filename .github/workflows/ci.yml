@@ -20,6 +20,25 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Pack
+      run: dotnet pack --configuration Release --no-build
+      
   publish-docs:
     environment:
       name: github-pages
