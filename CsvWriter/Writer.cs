@@ -83,13 +83,11 @@ public class Writer
 
             foreach (var obj in objs)
             {
-                var props = obj.GetType().GetProperties();
+                var props = obj?.GetType().GetProperties();
                 csv.Append("\n");
                 foreach (var property in props)
                 {
                     var format = property.GetFormatColumn();
-
-                    //como verificar se é uma string, int, decimal, etc? e depois aplicar a formatação conforme o caso?
 
                     if (property.PropertyType == typeof(string))
                     {
