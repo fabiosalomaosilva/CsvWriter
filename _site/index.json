@@ -1,0 +1,82 @@
+{
+  "README.html": {
+    "href": "README.html",
+    "title": "CsvWriter | CsvWriter",
+    "keywords": "CsvWriter CsvWriter is a simple tool for writing data to CSV files. Features Write data in CSV format. Support for different delimiters. Support for different encodings. Support for ZIP compression. Support for formatting data. Easy to use and integrate into other projects. Installation Para instalar o CsvWriter, você pode clonar o repositório diretamente do GitHub: git clone https://github.com/seu-usuario/CsvWriter.git Usage Here is a basic example of how to use CsvWriter to create a CSV file in MemoryStream: public class Order { [Name(\"ID\")] public string Id { get; set; } [Name(\"Date of Order\")] [Format(FormatColumn.LongDate)] public DateTime Date { get; set; } [Name(\"Quantity\")] public int Quantity { get; set; } [Name(\"ID\")] [Format(FormatColumn.Decimal)] public decimal Amount { get; set; } [Name(\"Total\")] [Format(FormatColumn.Currency)] public decimal Total { get; set; } [Name(\"Customer\")] public string Customer { get; set; } [Name(\"IsShipping\")] public bool IsShipping { get; set; } } using System; using System.Collections.Generic; using CsvWriterLib; class Program { static void Main() { var listaEmissores = new List<Order> { new Order { Id = Guid.NewGuid().ToString(), Date = DateTime.Now, Quantity = 1, IsShipping = true, Amount = 100.00m, Total = 100.00m, Customer = \"Customer 1\" }, new Order { Id = Guid.NewGuid().ToString(), IsShipping = true, Date = DateTime.Now, Quantity = 2, Amount = 200.00m, Total = 400.00m, Customer = \"Customer 2\" }, new Order { Id = Guid.NewGuid().ToString(), IsShipping = false, Date = DateTime.Now, Quantity = 3, Amount = 300.00m, Total = 900.00m, Customer = \"Customer 3\" } }; var options = new CsvWriterOptions { Delimiter = \";\", CultureInfo = CultureInfo.GetCultureInfo(\"pt-BR\"), Encoding = new UTF8Encoding(false) }; var csvWriter = new Writer(); MemoryStream csv = await csvWriter.CreateFileAsMemoryStream(listaEmissores, options); } } Here is a basic example of how to use CsvWriter to create a ZIP-compressed CSV file with output in MemoryStream: using System; using System.Collections.Generic; using CsvWriterLib; class Program { static void Main() { var listaEmissores = new List<Order> { new Order { Id = Guid.NewGuid().ToString(), Date = DateTime.Now, Quantity = 1, IsShipping = true, Amount = 100.00m, Total = 100.00m, Customer = \"Customer 1\" }, new Order { Id = Guid.NewGuid().ToString(), IsShipping = true, Date = DateTime.Now, Quantity = 2, Amount = 200.00m, Total = 400.00m, Customer = \"Customer 2\" }, new Order { Id = Guid.NewGuid().ToString(), IsShipping = false, Date = DateTime.Now, Quantity = 3, Amount = 300.00m, Total = 900.00m, Customer = \"Customer 3\" } }; var options = new CsvWriterOptions { Delimiter = \";\", CultureInfo = CultureInfo.GetCultureInfo(\"pt-BR\"), Encoding = Encoding.UTF8 }; var name = \"OrderReport\"; var csv = new Writer(); MemoryStream relatorio = await csv.CreateCompressedFileAsMemoryStream(data, name, new UTF8Encoding(false)); } } Contribution Contributions are welcome! Feel free to open issues and pull requests. License This project is licensed under the MIT License. See the LICENSE file for more details. CsvWriter is a simple tool for writing data to CSV files."
+  },
+  "api/CsvWriter.Attributes.FormatAttribute.html": {
+    "href": "api/CsvWriter.Attributes.FormatAttribute.html",
+    "title": "Class FormatAttribute | CsvWriter",
+    "keywords": "Class FormatAttribute Namespace CsvWriter.Attributes Assembly CsvWriter.dll Specifies the format for a property when writing to a CSV file. [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)] public class FormatAttribute : Attribute Inheritance object Attribute FormatAttribute Inherited Members Attribute.Equals(object) Attribute.GetCustomAttribute(Assembly, Type) Attribute.GetCustomAttribute(Assembly, Type, bool) Attribute.GetCustomAttribute(MemberInfo, Type) Attribute.GetCustomAttribute(MemberInfo, Type, bool) Attribute.GetCustomAttribute(Module, Type) Attribute.GetCustomAttribute(Module, Type, bool) Attribute.GetCustomAttribute(ParameterInfo, Type) Attribute.GetCustomAttribute(ParameterInfo, Type, bool) Attribute.GetCustomAttributes(Assembly) Attribute.GetCustomAttributes(Assembly, bool) Attribute.GetCustomAttributes(Assembly, Type) Attribute.GetCustomAttributes(Assembly, Type, bool) Attribute.GetCustomAttributes(MemberInfo) Attribute.GetCustomAttributes(MemberInfo, bool) Attribute.GetCustomAttributes(MemberInfo, Type) Attribute.GetCustomAttributes(MemberInfo, Type, bool) Attribute.GetCustomAttributes(Module) Attribute.GetCustomAttributes(Module, bool) Attribute.GetCustomAttributes(Module, Type) Attribute.GetCustomAttributes(Module, Type, bool) Attribute.GetCustomAttributes(ParameterInfo) Attribute.GetCustomAttributes(ParameterInfo, bool) Attribute.GetCustomAttributes(ParameterInfo, Type) Attribute.GetCustomAttributes(ParameterInfo, Type, bool) Attribute.GetHashCode() Attribute.IsDefaultAttribute() Attribute.IsDefined(Assembly, Type) Attribute.IsDefined(Assembly, Type, bool) Attribute.IsDefined(MemberInfo, Type) Attribute.IsDefined(MemberInfo, Type, bool) Attribute.IsDefined(Module, Type) Attribute.IsDefined(Module, Type, bool) Attribute.IsDefined(ParameterInfo, Type) Attribute.IsDefined(ParameterInfo, Type, bool) Attribute.Match(object) Attribute.TypeId object.Equals(object, object) object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors FormatAttribute(FormatColumn, string?) Initializes a new instance of the FormatAttribute class with the specified format. public FormatAttribute(FormatColumn format, string? customFormat = null) Parameters format FormatColumn The format string. customFormat string The custom format Properties CustomFormat Gets the custom format. public string? CustomFormat { get; } Property Value string Format Gets the format string. public FormatColumn Format { get; } Property Value FormatColumn"
+  },
+  "api/CsvWriter.Attributes.NameAttribute.html": {
+    "href": "api/CsvWriter.Attributes.NameAttribute.html",
+    "title": "Class NameAttribute | CsvWriter",
+    "keywords": "Class NameAttribute Namespace CsvWriter.Attributes Assembly CsvWriter.dll Specifies the name of a property when writing to a CSV file. [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)] public class NameAttribute : Attribute Inheritance object Attribute NameAttribute Inherited Members Attribute.Equals(object) Attribute.GetCustomAttribute(Assembly, Type) Attribute.GetCustomAttribute(Assembly, Type, bool) Attribute.GetCustomAttribute(MemberInfo, Type) Attribute.GetCustomAttribute(MemberInfo, Type, bool) Attribute.GetCustomAttribute(Module, Type) Attribute.GetCustomAttribute(Module, Type, bool) Attribute.GetCustomAttribute(ParameterInfo, Type) Attribute.GetCustomAttribute(ParameterInfo, Type, bool) Attribute.GetCustomAttributes(Assembly) Attribute.GetCustomAttributes(Assembly, bool) Attribute.GetCustomAttributes(Assembly, Type) Attribute.GetCustomAttributes(Assembly, Type, bool) Attribute.GetCustomAttributes(MemberInfo) Attribute.GetCustomAttributes(MemberInfo, bool) Attribute.GetCustomAttributes(MemberInfo, Type) Attribute.GetCustomAttributes(MemberInfo, Type, bool) Attribute.GetCustomAttributes(Module) Attribute.GetCustomAttributes(Module, bool) Attribute.GetCustomAttributes(Module, Type) Attribute.GetCustomAttributes(Module, Type, bool) Attribute.GetCustomAttributes(ParameterInfo) Attribute.GetCustomAttributes(ParameterInfo, bool) Attribute.GetCustomAttributes(ParameterInfo, Type) Attribute.GetCustomAttributes(ParameterInfo, Type, bool) Attribute.GetHashCode() Attribute.IsDefaultAttribute() Attribute.IsDefined(Assembly, Type) Attribute.IsDefined(Assembly, Type, bool) Attribute.IsDefined(MemberInfo, Type) Attribute.IsDefined(MemberInfo, Type, bool) Attribute.IsDefined(Module, Type) Attribute.IsDefined(Module, Type, bool) Attribute.IsDefined(ParameterInfo, Type) Attribute.IsDefined(ParameterInfo, Type, bool) Attribute.Match(object) Attribute.TypeId object.Equals(object, object) object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors NameAttribute(string) Initializes a new instance of the NameAttribute class with the specified name. public NameAttribute(string name) Parameters name string The name of the property. Properties Name Gets the name of the property. public string Name { get; } Property Value string"
+  },
+  "api/CsvWriter.Attributes.html": {
+    "href": "api/CsvWriter.Attributes.html",
+    "title": "Namespace CsvWriter.Attributes | CsvWriter",
+    "keywords": "Namespace CsvWriter.Attributes Classes FormatAttribute Specifies the format for a property when writing to a CSV file. NameAttribute Specifies the name of a property when writing to a CSV file."
+  },
+  "api/CsvWriter.Configuration.CsvWriterOptions.html": {
+    "href": "api/CsvWriter.Configuration.CsvWriterOptions.html",
+    "title": "Class CsvWriterOptions | CsvWriter",
+    "keywords": "Class CsvWriterOptions Namespace CsvWriter.Configuration Assembly CsvWriter.dll Represents the options for the CsvWriter. public class CsvWriterOptions Inheritance object CsvWriterOptions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties CultureInfo Gets or sets the culture used for formatting values in the CSV file. public CultureInfo? CultureInfo { get; set; } Property Value CultureInfo Delimiter Gets or sets the delimiter used for separating values in the CSV file. public string? Delimiter { get; set; } Property Value string Encoding Gets or sets the encoding used for writing the CSV file. public Encoding? Encoding { get; set; } Property Value Encoding"
+  },
+  "api/CsvWriter.Configuration.FormatColumn.html": {
+    "href": "api/CsvWriter.Configuration.FormatColumn.html",
+    "title": "Enum FormatColumn | CsvWriter",
+    "keywords": "Enum FormatColumn Namespace CsvWriter.Configuration Assembly CsvWriter.dll public enum FormatColumn Extension Methods FormatColumnExtensions.GetFormat(FormatColumn) Fields Currency = 8 The currency format. Custom = 12 The custom format. Decimal = 1 The decimal number format. Default = 0 The default format. GeneralNumber = 11 The general number format. LongDate = 3 The long date format. LongDateTime = 7 The long date and time format. LongTime = 5 The long time format. Percentage = 9 The percentage format. Scientific = 10 The scientific format. ShortDate = 2 The short date format. ShortDateTime = 6 The short date and time format. ShortTime = 4 The short time format."
+  },
+  "api/CsvWriter.Configuration.html": {
+    "href": "api/CsvWriter.Configuration.html",
+    "title": "Namespace CsvWriter.Configuration | CsvWriter",
+    "keywords": "Namespace CsvWriter.Configuration Classes CsvWriterOptions Represents the options for the CsvWriter. Enums FormatColumn"
+  },
+  "api/CsvWriter.FormatColumnExtensions.html": {
+    "href": "api/CsvWriter.FormatColumnExtensions.html",
+    "title": "Class FormatColumnExtensions | CsvWriter",
+    "keywords": "Class FormatColumnExtensions Namespace CsvWriter Assembly CsvWriter.dll public static class FormatColumnExtensions Inheritance object FormatColumnExtensions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetFormat(FormatColumn) public static string GetFormat(this FormatColumn format) Parameters format FormatColumn Returns string"
+  },
+  "api/CsvWriter.POC.Order.html": {
+    "href": "api/CsvWriter.POC.Order.html",
+    "title": "Class Order | CsvWriter",
+    "keywords": "Class Order Namespace CsvWriter.POC Assembly CsvWriter.POC.dll public class Order Inheritance object Order Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Amount [Name(\"ID\")] [Format(FormatColumn.Decimal, null)] public decimal Amount { get; set; } Property Value decimal Customer [Name(\"Customer\")] public string Customer { get; set; } Property Value string Date [Name(\"Date of Order\")] [Format(FormatColumn.LongDate, null)] public DateTime Date { get; set; } Property Value DateTime Id [Name(\"ID\")] public string Id { get; set; } Property Value string IsShipping [Name(\"IsShipping\")] public bool IsShipping { get; set; } Property Value bool Quantity [Name(\"Quantity\")] public int Quantity { get; set; } Property Value int Total [Name(\"Total\")] [Format(FormatColumn.Currency, null)] public decimal Total { get; set; } Property Value decimal"
+  },
+  "api/CsvWriter.POC.Program.html": {
+    "href": "api/CsvWriter.POC.Program.html",
+    "title": "Class Program | CsvWriter",
+    "keywords": "Class Program Namespace CsvWriter.POC Assembly CsvWriter.POC.dll public class Program Inheritance object Program Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Main() public static Task Main() Returns Task"
+  },
+  "api/CsvWriter.POC.html": {
+    "href": "api/CsvWriter.POC.html",
+    "title": "Namespace CsvWriter.POC | CsvWriter",
+    "keywords": "Namespace CsvWriter.POC Classes Order Program"
+  },
+  "api/CsvWriter.Writer.html": {
+    "href": "api/CsvWriter.Writer.html",
+    "title": "Class Writer | CsvWriter",
+    "keywords": "Class Writer Namespace CsvWriter Assembly CsvWriter.dll Provides methods for creating CSV files. public class Writer Inheritance object Writer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CreateCompressedFileAsMemoryStream<T>(IEnumerable<T>, string, CsvWriterOptions?) Creates a compressed CSV file as a memory stream. public Task<MemoryStream> CreateCompressedFileAsMemoryStream<T>(IEnumerable<T> objs, string name, CsvWriterOptions? options = null) Parameters objs IEnumerable<T> The collection of objects to write to the CSV file. name string The name of the compressed file. options CsvWriterOptions The options for writing the CSV file. Returns Task<MemoryStream> A memory stream containing the compressed CSV file. Type Parameters T The type of objects in the CSV file. CreateFileAsMemoryStream<T>(IEnumerable<T>, CsvWriterOptions?) Creates a CSV file as a memory stream. public MemoryStream CreateFileAsMemoryStream<T>(IEnumerable<T> objs, CsvWriterOptions? options = null) Parameters objs IEnumerable<T> The collection of objects to write to the CSV file. options CsvWriterOptions The options for writing the CSV file. Returns MemoryStream A memory stream containing the CSV file. Type Parameters T The type of objects in the CSV file."
+  },
+  "api/CsvWriter.html": {
+    "href": "api/CsvWriter.html",
+    "title": "Namespace CsvWriter | CsvWriter",
+    "keywords": "Namespace CsvWriter Classes FormatColumnExtensions Writer Provides methods for creating CSV files."
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | CsvWriter",
+    "keywords": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | CsvWriter",
+    "keywords": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | CsvWriter",
+    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}

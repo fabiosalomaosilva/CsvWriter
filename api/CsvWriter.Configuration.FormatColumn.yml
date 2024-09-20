@@ -1,0 +1,500 @@
+### YamlMime:ManagedReference
+items:
+- uid: CsvWriter.Configuration.FormatColumn
+  commentId: T:CsvWriter.Configuration.FormatColumn
+  id: FormatColumn
+  parent: CsvWriter.Configuration
+  children:
+  - CsvWriter.Configuration.FormatColumn.Currency
+  - CsvWriter.Configuration.FormatColumn.Custom
+  - CsvWriter.Configuration.FormatColumn.Decimal
+  - CsvWriter.Configuration.FormatColumn.Default
+  - CsvWriter.Configuration.FormatColumn.GeneralNumber
+  - CsvWriter.Configuration.FormatColumn.LongDate
+  - CsvWriter.Configuration.FormatColumn.LongDateTime
+  - CsvWriter.Configuration.FormatColumn.LongTime
+  - CsvWriter.Configuration.FormatColumn.Percentage
+  - CsvWriter.Configuration.FormatColumn.Scientific
+  - CsvWriter.Configuration.FormatColumn.ShortDate
+  - CsvWriter.Configuration.FormatColumn.ShortDateTime
+  - CsvWriter.Configuration.FormatColumn.ShortTime
+  langs:
+  - csharp
+  - vb
+  name: FormatColumn
+  nameWithType: FormatColumn
+  fullName: CsvWriter.Configuration.FormatColumn
+  type: Enum
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: FormatColumn
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 2
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  syntax:
+    content: public enum FormatColumn
+    content.vb: Public Enum FormatColumn
+  extensionMethods:
+  - CsvWriter.Configuration.FormatColumn.CsvWriter.FormatColumnExtensions.GetFormat
+- uid: CsvWriter.Configuration.FormatColumn.Default
+  commentId: F:CsvWriter.Configuration.FormatColumn.Default
+  id: Default
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: FormatColumn.Default
+  fullName: CsvWriter.Configuration.FormatColumn.Default
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: Default
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 7
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The default format.
+  example: []
+  syntax:
+    content: Default = 0
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.Decimal
+  commentId: F:CsvWriter.Configuration.FormatColumn.Decimal
+  id: Decimal
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: Decimal
+  nameWithType: FormatColumn.Decimal
+  fullName: CsvWriter.Configuration.FormatColumn.Decimal
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: Decimal
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 12
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The decimal number format.
+  example: []
+  syntax:
+    content: Decimal = 1
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.ShortDate
+  commentId: F:CsvWriter.Configuration.FormatColumn.ShortDate
+  id: ShortDate
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: ShortDate
+  nameWithType: FormatColumn.ShortDate
+  fullName: CsvWriter.Configuration.FormatColumn.ShortDate
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: ShortDate
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 17
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The short date format.
+  example: []
+  syntax:
+    content: ShortDate = 2
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.LongDate
+  commentId: F:CsvWriter.Configuration.FormatColumn.LongDate
+  id: LongDate
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: LongDate
+  nameWithType: FormatColumn.LongDate
+  fullName: CsvWriter.Configuration.FormatColumn.LongDate
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: LongDate
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 22
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The long date format.
+  example: []
+  syntax:
+    content: LongDate = 3
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.ShortTime
+  commentId: F:CsvWriter.Configuration.FormatColumn.ShortTime
+  id: ShortTime
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: ShortTime
+  nameWithType: FormatColumn.ShortTime
+  fullName: CsvWriter.Configuration.FormatColumn.ShortTime
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: ShortTime
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 27
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The short time format.
+  example: []
+  syntax:
+    content: ShortTime = 4
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.LongTime
+  commentId: F:CsvWriter.Configuration.FormatColumn.LongTime
+  id: LongTime
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: LongTime
+  nameWithType: FormatColumn.LongTime
+  fullName: CsvWriter.Configuration.FormatColumn.LongTime
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: LongTime
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 32
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The long time format.
+  example: []
+  syntax:
+    content: LongTime = 5
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.ShortDateTime
+  commentId: F:CsvWriter.Configuration.FormatColumn.ShortDateTime
+  id: ShortDateTime
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: ShortDateTime
+  nameWithType: FormatColumn.ShortDateTime
+  fullName: CsvWriter.Configuration.FormatColumn.ShortDateTime
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: ShortDateTime
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 37
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The short date and time format.
+  example: []
+  syntax:
+    content: ShortDateTime = 6
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.LongDateTime
+  commentId: F:CsvWriter.Configuration.FormatColumn.LongDateTime
+  id: LongDateTime
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: LongDateTime
+  nameWithType: FormatColumn.LongDateTime
+  fullName: CsvWriter.Configuration.FormatColumn.LongDateTime
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: LongDateTime
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 42
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The long date and time format.
+  example: []
+  syntax:
+    content: LongDateTime = 7
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.Currency
+  commentId: F:CsvWriter.Configuration.FormatColumn.Currency
+  id: Currency
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: Currency
+  nameWithType: FormatColumn.Currency
+  fullName: CsvWriter.Configuration.FormatColumn.Currency
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: Currency
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 47
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The currency format.
+  example: []
+  syntax:
+    content: Currency = 8
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.Percentage
+  commentId: F:CsvWriter.Configuration.FormatColumn.Percentage
+  id: Percentage
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: Percentage
+  nameWithType: FormatColumn.Percentage
+  fullName: CsvWriter.Configuration.FormatColumn.Percentage
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: Percentage
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 52
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The percentage format.
+  example: []
+  syntax:
+    content: Percentage = 9
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.Scientific
+  commentId: F:CsvWriter.Configuration.FormatColumn.Scientific
+  id: Scientific
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: Scientific
+  nameWithType: FormatColumn.Scientific
+  fullName: CsvWriter.Configuration.FormatColumn.Scientific
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: Scientific
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 57
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The scientific format.
+  example: []
+  syntax:
+    content: Scientific = 10
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.GeneralNumber
+  commentId: F:CsvWriter.Configuration.FormatColumn.GeneralNumber
+  id: GeneralNumber
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: GeneralNumber
+  nameWithType: FormatColumn.GeneralNumber
+  fullName: CsvWriter.Configuration.FormatColumn.GeneralNumber
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: GeneralNumber
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 62
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The general number format.
+  example: []
+  syntax:
+    content: GeneralNumber = 11
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+- uid: CsvWriter.Configuration.FormatColumn.Custom
+  commentId: F:CsvWriter.Configuration.FormatColumn.Custom
+  id: Custom
+  parent: CsvWriter.Configuration.FormatColumn
+  langs:
+  - csharp
+  - vb
+  name: Custom
+  nameWithType: FormatColumn.Custom
+  fullName: CsvWriter.Configuration.FormatColumn.Custom
+  type: Field
+  source:
+    remote:
+      path: CsvWriter/Configuration/FormatColumn.cs
+      branch: feat/edit-formaters
+      repo: https://github.com/fabiosalomaosilva/CsvWriter.git
+    id: Custom
+    path: CsvWriter/Configuration/FormatColumn.cs
+    startLine: 67
+  assemblies:
+  - CsvWriter
+  namespace: CsvWriter.Configuration
+  summary: The custom format.
+  example: []
+  syntax:
+    content: Custom = 12
+    return:
+      type: CsvWriter.Configuration.FormatColumn
+references:
+- uid: CsvWriter.Configuration
+  commentId: N:CsvWriter.Configuration
+  href: CsvWriter.html
+  name: CsvWriter.Configuration
+  nameWithType: CsvWriter.Configuration
+  fullName: CsvWriter.Configuration
+  spec.csharp:
+  - uid: CsvWriter
+    name: CsvWriter
+    href: CsvWriter.html
+  - name: .
+  - uid: CsvWriter.Configuration
+    name: Configuration
+    href: CsvWriter.Configuration.html
+  spec.vb:
+  - uid: CsvWriter
+    name: CsvWriter
+    href: CsvWriter.html
+  - name: .
+  - uid: CsvWriter.Configuration
+    name: Configuration
+    href: CsvWriter.Configuration.html
+- uid: CsvWriter.Configuration.FormatColumn.CsvWriter.FormatColumnExtensions.GetFormat
+  commentId: M:CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+  parent: CsvWriter.FormatColumnExtensions
+  definition: CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+  href: CsvWriter.FormatColumnExtensions.html#CsvWriter_FormatColumnExtensions_GetFormat_CsvWriter_Configuration_FormatColumn_
+  name: GetFormat(FormatColumn)
+  nameWithType: FormatColumnExtensions.GetFormat(FormatColumn)
+  fullName: CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+  spec.csharp:
+  - uid: CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+    name: GetFormat
+    href: CsvWriter.FormatColumnExtensions.html#CsvWriter_FormatColumnExtensions_GetFormat_CsvWriter_Configuration_FormatColumn_
+  - name: (
+  - uid: CsvWriter.Configuration.FormatColumn
+    name: FormatColumn
+    href: CsvWriter.Configuration.FormatColumn.html
+  - name: )
+  spec.vb:
+  - uid: CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+    name: GetFormat
+    href: CsvWriter.FormatColumnExtensions.html#CsvWriter_FormatColumnExtensions_GetFormat_CsvWriter_Configuration_FormatColumn_
+  - name: (
+  - uid: CsvWriter.Configuration.FormatColumn
+    name: FormatColumn
+    href: CsvWriter.Configuration.FormatColumn.html
+  - name: )
+- uid: CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+  commentId: M:CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+  href: CsvWriter.FormatColumnExtensions.html#CsvWriter_FormatColumnExtensions_GetFormat_CsvWriter_Configuration_FormatColumn_
+  name: GetFormat(FormatColumn)
+  nameWithType: FormatColumnExtensions.GetFormat(FormatColumn)
+  fullName: CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+  spec.csharp:
+  - uid: CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+    name: GetFormat
+    href: CsvWriter.FormatColumnExtensions.html#CsvWriter_FormatColumnExtensions_GetFormat_CsvWriter_Configuration_FormatColumn_
+  - name: (
+  - uid: CsvWriter.Configuration.FormatColumn
+    name: FormatColumn
+    href: CsvWriter.Configuration.FormatColumn.html
+  - name: )
+  spec.vb:
+  - uid: CsvWriter.FormatColumnExtensions.GetFormat(CsvWriter.Configuration.FormatColumn)
+    name: GetFormat
+    href: CsvWriter.FormatColumnExtensions.html#CsvWriter_FormatColumnExtensions_GetFormat_CsvWriter_Configuration_FormatColumn_
+  - name: (
+  - uid: CsvWriter.Configuration.FormatColumn
+    name: FormatColumn
+    href: CsvWriter.Configuration.FormatColumn.html
+  - name: )
+- uid: CsvWriter.FormatColumnExtensions
+  commentId: T:CsvWriter.FormatColumnExtensions
+  parent: CsvWriter
+  href: CsvWriter.FormatColumnExtensions.html
+  name: FormatColumnExtensions
+  nameWithType: FormatColumnExtensions
+  fullName: CsvWriter.FormatColumnExtensions
+- uid: CsvWriter
+  commentId: N:CsvWriter
+  href: CsvWriter.html
+  name: CsvWriter
+  nameWithType: CsvWriter
+  fullName: CsvWriter
+- uid: CsvWriter.Configuration.FormatColumn
+  commentId: T:CsvWriter.Configuration.FormatColumn
+  parent: CsvWriter.Configuration
+  href: CsvWriter.Configuration.FormatColumn.html
+  name: FormatColumn
+  nameWithType: FormatColumn
+  fullName: CsvWriter.Configuration.FormatColumn

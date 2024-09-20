@@ -1,0 +1,218 @@
+{
+  "source_base_path": "C:/Users/fabio/source/repos/CsvWriter",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.Attributes.FormatAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.Attributes.FormatAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.Attributes.NameAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.Attributes.NameAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.Attributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.Configuration.CsvWriterOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.Configuration.CsvWriterOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.Configuration.FormatColumn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.Configuration.FormatColumn.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.Configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.FormatColumnExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.FormatColumnExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.POC.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.POC.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.POC.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.POC.Program.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.POC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.POC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.Writer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CsvWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CsvWriter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
