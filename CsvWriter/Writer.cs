@@ -89,8 +89,6 @@ public class Writer
                 {
                     var format = property.GetFormatColumn();
 
-                    //como verificar se é uma string, int, decimal, etc? e depois aplicar a formatação conforme o caso?
-
                     if (property.PropertyType == typeof(string))
                     {
                         var value = Convert.ToString(property.GetValue(obj), options.CultureInfo);
