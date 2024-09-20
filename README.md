@@ -13,18 +13,19 @@ CsvWriter is a simple tool for writing data to CSV files.
 ## Installation
 
 To use CsvWriter, you can install it directly from the NUGET Package Manager.
+
 Here are some ways to install the package:
 
 ```bash
 .NET CLI
 dotnet add package CsvWriter
 
-ou
+or
 
 Package Manager
 NuGet\Install-Package CsvWriter
 
-ou
+or
 
 PackageReference
 <PackageReference Include="CsvWriter" Version="1.0.10" />
@@ -33,7 +34,7 @@ PackageReference
 
 ## Usage
 
-Here is a basic example of how to use CsvWriter to create a CSV file in MemoryStream:
+Example of a model class to be used as a guide for the CSV file.
 
 ```csharp
 public class Order
@@ -64,6 +65,7 @@ public class Order
 }
 ```
 
+Here is a basic example of how to use CsvWriter to create a CSV file in MemoryStream:
 
 ```csharp
 using System;
