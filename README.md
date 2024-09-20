@@ -12,10 +12,22 @@ CsvWriter is a simple tool for writing data to CSV files.
 
 ## Installation
 
-Para instalar o CsvWriter, você pode clonar o repositório diretamente do GitHub:
+Para instalar o CsvWriter, você pode instalar diretamente do NUGET Package Manager:
 
 ```bash
-git clone https://github.com/seu-usuario/CsvWriter.git
+.NET CLI
+dotnet add package CsvWriter
+
+ou
+
+Package Manager
+NuGet\Install-Package CsvWriter
+
+ou
+
+PackageReference
+<PackageReference Include="CsvWriter" Version="1.0.10" />
+
 ```
 
 ## Usage
