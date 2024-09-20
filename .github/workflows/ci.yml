@@ -35,9 +35,6 @@ jobs:
 
     - name: Build
       run: dotnet build --configuration Release --no-restore
-
-    - name: Pack
-      run: dotnet pack --configuration Release --no-build
       
   publish-docs:
     environment:
