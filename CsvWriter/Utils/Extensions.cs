@@ -1,5 +1,6 @@
 ﻿using CsvWriter.Attributes;
 using CsvWriter.Configuration;
+using System.Linq;
 using System.Reflection;
 
 namespace CsvWriter.Utils
