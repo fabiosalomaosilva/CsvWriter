@@ -1,4 +1,6 @@
-﻿namespace CsvWriter.Attributes
+﻿using System;
+
+namespace CsvWriter.Attributes
 {
     /// <summary>
     /// Specifies the name of a property when writing to a CSV file.
