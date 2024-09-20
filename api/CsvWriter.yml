@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: CsvWriter
+  commentId: N:CsvWriter
+  id: CsvWriter
+  children:
+  - CsvWriter.FormatColumnExtensions
+  - CsvWriter.Writer
+  langs:
+  - csharp
+  - vb
+  name: CsvWriter
+  nameWithType: CsvWriter
+  fullName: CsvWriter
+  type: Namespace
+  assemblies:
+  - CsvWriter
+references:
+- uid: CsvWriter.FormatColumnExtensions
+  commentId: T:CsvWriter.FormatColumnExtensions
+  parent: CsvWriter
+  href: CsvWriter.FormatColumnExtensions.html
+  name: FormatColumnExtensions
+  nameWithType: FormatColumnExtensions
+  fullName: CsvWriter.FormatColumnExtensions
+- uid: CsvWriter.Writer
+  commentId: T:CsvWriter.Writer
+  href: CsvWriter.Writer.html
+  name: Writer
+  nameWithType: Writer
+  fullName: CsvWriter.Writer
+- uid: CsvWriter
+  commentId: N:CsvWriter
+  href: CsvWriter.html
+  name: CsvWriter
+  nameWithType: CsvWriter
+  fullName: CsvWriter

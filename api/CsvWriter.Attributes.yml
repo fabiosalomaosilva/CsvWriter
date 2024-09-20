@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: CsvWriter.Attributes
+  commentId: N:CsvWriter.Attributes
+  id: CsvWriter.Attributes
+  children:
+  - CsvWriter.Attributes.FormatAttribute
+  - CsvWriter.Attributes.NameAttribute
+  langs:
+  - csharp
+  - vb
+  name: CsvWriter.Attributes
+  nameWithType: CsvWriter.Attributes
+  fullName: CsvWriter.Attributes
+  type: Namespace
+  assemblies:
+  - CsvWriter
+references:
+- uid: CsvWriter.Attributes.FormatAttribute
+  commentId: T:CsvWriter.Attributes.FormatAttribute
+  parent: CsvWriter.Attributes
+  href: CsvWriter.Attributes.FormatAttribute.html
+  name: FormatAttribute
+  nameWithType: FormatAttribute
+  fullName: CsvWriter.Attributes.FormatAttribute
+- uid: CsvWriter.Attributes.NameAttribute
+  commentId: T:CsvWriter.Attributes.NameAttribute
+  parent: CsvWriter.Attributes
+  href: CsvWriter.Attributes.NameAttribute.html
+  name: NameAttribute
+  nameWithType: NameAttribute
+  fullName: CsvWriter.Attributes.NameAttribute
+- uid: CsvWriter.Attributes
+  commentId: N:CsvWriter.Attributes
+  href: CsvWriter.html
+  name: CsvWriter.Attributes
+  nameWithType: CsvWriter.Attributes
+  fullName: CsvWriter.Attributes
+  spec.csharp:
+  - uid: CsvWriter
+    name: CsvWriter
+    href: CsvWriter.html
+  - name: .
+  - uid: CsvWriter.Attributes
+    name: Attributes
+    href: CsvWriter.Attributes.html
+  spec.vb:
+  - uid: CsvWriter
+    name: CsvWriter
+    href: CsvWriter.html
+  - name: .
+  - uid: CsvWriter.Attributes
+    name: Attributes
+    href: CsvWriter.Attributes.html

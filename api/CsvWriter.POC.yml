@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: CsvWriter.POC
+  commentId: N:CsvWriter.POC
+  id: CsvWriter.POC
+  children:
+  - CsvWriter.POC.Order
+  - CsvWriter.POC.Program
+  langs:
+  - csharp
+  - vb
+  name: CsvWriter.POC
+  nameWithType: CsvWriter.POC
+  fullName: CsvWriter.POC
+  type: Namespace
+  assemblies:
+  - CsvWriter.POC
+references:
+- uid: CsvWriter.POC.Program
+  commentId: T:CsvWriter.POC.Program
+  href: CsvWriter.POC.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: CsvWriter.POC.Program
+- uid: CsvWriter.POC.Order
+  commentId: T:CsvWriter.POC.Order
+  href: CsvWriter.POC.Order.html
+  name: Order
+  nameWithType: Order
+  fullName: CsvWriter.POC.Order
