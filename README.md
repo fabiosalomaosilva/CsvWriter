@@ -12,7 +12,8 @@ CsvWriter is a simple tool for writing data to CSV files.
 
 ## Installation
 
-Para instalar o CsvWriter, você pode instalar diretamente do NUGET Package Manager:
+To use CsvWriter, you can install it directly from the NUGET Package Manager.
+Here are some ways to install the package:
 
 ```bash
 .NET CLI
