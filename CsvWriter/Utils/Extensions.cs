@@ -1,4 +1,5 @@
 ﻿using CsvWriter.Attributes;
+using CsvWriter.Configuration;
 using System.Reflection;
 
 namespace CsvWriter.Utils
@@ -14,7 +15,21 @@ namespace CsvWriter.Utils
         internal static string? GetFormatColumn(this PropertyInfo property)
         {
             var attribute = property.GetCustomAttributes(typeof(FormatAttribute), false).FirstOrDefault();
-            return ((FormatAttribute)attribute!)?.Format;
+            if (attribute == null)
+            {
+                return FormatColumn.Default.GetFormat();
+            }
+
+            var format = ((FormatAttribute)attribute!).Format == null
+                ? FormatColumn.Default
+                : ((FormatAttribute)attribute!).Format;
+
+            if (format == FormatColumn.Custom)
+            {
+                return ((FormatAttribute)attribute!)?.CustomFormat ?? FormatColumn.Default.GetFormat();
+            }
+
+            return format.GetFormat();
         }
     }
 }

@@ -5,6 +5,9 @@ CsvWriter is a simple tool for writing data to CSV files.
 
 - Write data in CSV format.
 - Support for different delimiters.
+- Support for different encodings.
+- Support for ZIP compression.
+- Support for formatting data.
 - Easy to use and integrate into other projects.
 
 ## Installation
@@ -20,6 +23,36 @@ git clone https://github.com/seu-usuario/CsvWriter.git
 Here is a basic example of how to use CsvWriter to create a CSV file in MemoryStream:
 
 ```csharp
+public class Order
+{
+    [Name("ID")] 
+    public string Id { get; set; }
+
+    [Name("Date of Order")]
+    [Format(FormatColumn.LongDate)]
+    public DateTime Date { get; set; }
+
+    [Name("Quantity")] 
+    public int Quantity { get; set; }
+
+    [Name("ID")]
+    [Format(FormatColumn.Decimal)]
+    public decimal Amount { get; set; }
+
+    [Name("Total")]
+    [Format(FormatColumn.Currency)]
+    public decimal Total { get; set; }
+
+    [Name("Customer")] 
+    public string Customer { get; set; }
+
+    [Name("IsShipping")] 
+    public bool IsShipping { get; set; }
+}
+```
+
+
+```csharp
 using System;
 using System.Collections.Generic;
 using CsvWriterLib;
@@ -28,14 +61,49 @@ class Program
 {
     static void Main()
     {
-        var data = new List<List<string>> {
-            new List<string> { "Nome", "Idade", "Cidade" },
-            new List<string> { "Alice", "30", "São Paulo" },
-            new List<string> { "Bob", "25", "Rio de Janeiro" }
+        var listaEmissores = new List<Order>
+        {
+            new Order
+            {
+                Id = Guid.NewGuid().ToString(),
+                Date = DateTime.Now,
+                Quantity = 1,
+                IsShipping = true,
+                Amount = 100.00m,
+                Total = 100.00m,
+                Customer = "Customer 1"
+            },
+            new Order
+            {
+                Id = Guid.NewGuid().ToString(),
+                IsShipping = true,
+                Date = DateTime.Now,
+                Quantity = 2,
+                Amount = 200.00m,
+                Total = 400.00m,
+                Customer = "Customer 2"
+            },
+            new Order
+            {
+                Id = Guid.NewGuid().ToString(),
+                IsShipping = false,
+                Date = DateTime.Now,
+                Quantity = 3,
+                Amount = 300.00m,
+                Total = 900.00m,
+                Customer = "Customer 3"
+            }
         };
 
-        var csv = new Writer();
-        MemoryStream relatorio = await csv.CreateFileAsMemoryStream(data, nome, new UTF8Encoding(false));
+        var options = new CsvWriterOptions
+        {
+            Delimiter = ";",
+            CultureInfo = CultureInfo.GetCultureInfo("pt-BR"),
+            Encoding = new UTF8Encoding(false)
+        };
+
+        var csvWriter = new Writer();
+        MemoryStream csv = await csvWriter.CreateFileAsMemoryStream(listaEmissores, options);
     }
 }
 ```
@@ -51,13 +119,48 @@ class Program
 {
     static void Main()
     {
-        var data = new List<List<string>> {
-            new List<string> { "Nome", "Idade", "Cidade" },
-            new List<string> { "Alice", "30", "São Paulo" },
-            new List<string> { "Bob", "25", "Rio de Janeiro" }
+        var listaEmissores = new List<Order>
+        {   
+            new Order
+            {
+                Id = Guid.NewGuid().ToString(),
+                Date = DateTime.Now,
+                Quantity = 1,
+                IsShipping = true,
+                Amount = 100.00m,
+                Total = 100.00m,
+                Customer = "Customer 1"
+            },
+            new Order
+            {
+                Id = Guid.NewGuid().ToString(),
+                IsShipping = true,
+                Date = DateTime.Now,
+                Quantity = 2,
+                Amount = 200.00m,
+                Total = 400.00m,
+                Customer = "Customer 2"
+            },
+            new Order
+            {
+                Id = Guid.NewGuid().ToString(),
+                IsShipping = false,
+                Date = DateTime.Now,
+                Quantity = 3,
+                Amount = 300.00m,
+                Total = 900.00m,
+                Customer = "Customer 3"
+            }
         };
 
-        var name = "RelatorioCliente";
+        var options = new CsvWriterOptions
+        {
+            Delimiter = ";",
+            CultureInfo = CultureInfo.GetCultureInfo("pt-BR"),
+            Encoding = Encoding.UTF8
+        };
+
+        var name = "OrderReport";
         var csv = new Writer();
         MemoryStream relatorio = await csv.CreateCompressedFileAsMemoryStream(data, name, new UTF8Encoding(false));
     }

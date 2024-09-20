@@ -1,4 +1,6 @@
-﻿namespace CsvWriter.Attributes;
+﻿using CsvWriter.Configuration;
+
+namespace CsvWriter.Attributes;
 
 /// <summary>
 /// Specifies the format for a property when writing to a CSV file.
@@ -10,13 +12,20 @@ public class FormatAttribute : Attribute
     /// Initializes a new instance of the <see cref="FormatAttribute"/> class with the specified format.
     /// </summary>
     /// <param name="format">The format string.</param>
-    public FormatAttribute(string format)
+    /// <param name="customFormat">The custom format</param>
+    public FormatAttribute(FormatColumn format, string? customFormat = null)
     {
         Format = format;
+        CustomFormat = customFormat;
     }
 
     /// <summary>
     /// Gets the format string.
     /// </summary>
-    public string Format { get; private set; }
+    public FormatColumn Format { get; private set; }
+
+    /// <summary>
+    /// Gets the custom format.
+    /// </summary>
+    public string? CustomFormat { get; private set; }
 }

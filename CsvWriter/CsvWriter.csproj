@@ -6,8 +6,8 @@
 	<Nullable>enable</Nullable>
 	<Authors>Fábio Salomão</Authors>
 	<Description>Biblioteca para geração de arquivos no formato CSV</Description>
-	<Version>1.0.6</Version>
 	<PackageOutputPath>./nupkg</PackageOutputPath>
+	  <Version>1.0.9</Version>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<Title>CSV Writer</Title>
 	<PackageProjectUrl>https://github.com/fabiosalomaosilva/CsvWriter</PackageProjectUrl>
@@ -15,6 +15,8 @@
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<RepositoryType>git</RepositoryType>
 	<RepositoryUrl>https://github.com/fabiosalomaosilva/CsvWriter</RepositoryUrl>
+
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
